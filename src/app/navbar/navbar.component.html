@@ -1,0 +1,8 @@
+<mat-toolbar>
+
+  <span>Demo</span>
+  <a mat-button [routerLink]="['tasks']">Tasks</a>
+  <span class="example-fill-remaining-space"></span>
+
+  <app-search-bar (searchText)="onSearch($event)"></app-search-bar>
+</mat-toolbar>

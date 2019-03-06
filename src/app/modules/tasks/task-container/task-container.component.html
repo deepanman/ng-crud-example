@@ -1,0 +1,32 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" [mode]="'side'" [opened]="'true'">
+    <mat-toolbar>
+      <mat-toolbar-row>
+        <span>Task List</span>
+
+        <!-- This fills the remaining space of the current row -->
+        <span class="example-fill-remaining-space"></span>
+      
+        <span><button mat-flat-button color="primary"(click)="goToAddTask()" >Add Task</button></span>
+       
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-nav-list>
+      <ng-container *ngFor="let task of taskList | async">
+      <div class="nav-item">
+      <a mat-list-item  [routerLink]="['/tasks', task.id]"
+        [routerLinkActive]="'active'">
+        <h2>{{task.title}}</h2>
+      </a>
+       <mat-icon color="accent" (click)="delete(task)">delete</mat-icon>
+      </div>
+      </ng-container>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    
+      
+      <router-outlet></router-outlet>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

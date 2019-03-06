@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+button.mat-flat-button {
+  margin-left: 2rem;
+}
+.sidenav {
+    width: 350px;
+}
+
+h2 {
+    font-weight: lighter;
+}
+
+.sidenav-container {
+    height: 100%;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.example-button-container{
+display: flex;
+justify-content: flex-end;
+}
+
+
+.example-container>* {
+    padding: 1rem;
+    width: 50%;
+}
+
+.example-card {
+    padding: 3rem;
+}
+
+.example-card .span {
+    font-weight: lighter;
+}
+
+.example-fill-remaining-space {
+  /* This fills the remaining space, by using flexbox. 
+     Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+mat-icon {
+  padding: 12px;
+}

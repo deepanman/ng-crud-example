@@ -1,0 +1,18 @@
+<form class="task-form"[formGroup]="taskForm">
+  <div class="example-container">
+    <mat-form-field >
+      <input matInput type="text" placeholder="Task Title" formControlName="title">
+    </mat-form-field>
+
+    <mat-form-field >
+      <textarea matInput placeholder="Task Description" formControlName="description" cdkTextareaAutosize
+      cdkAutosizeMinRows="1"
+      cdkAutosizeMaxRows="5"></textarea>
+    </mat-form-field>
+
+  <div class="example-button-container">
+    <button mat-flat-button color="primary" (click)="saveTask()" [disabled]="!taskForm.valid">Save</button>
+    <button mat-flat-button color="accent" (click)="cancel()">Cancel</button>
+  </div>
+</div>
+</form>

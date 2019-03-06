@@ -1,0 +1,12 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+     Task Detail
+    </mat-toolbar-row>
+  </mat-toolbar>
+<div class="example-card" *ngIf="task$ | async as task">
+  <h1>{{task.title}}</h1>
+  <h2>
+    {{task.description}}
+  </h2>
+  <button mat-flat-button color="primary" (click)="onEdit(task)">EDIT</button>
+</div>
