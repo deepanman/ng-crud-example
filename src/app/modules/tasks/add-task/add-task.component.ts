@@ -40,7 +40,7 @@ export class AddTaskComponent {
       this.taskService.update(this.taskForm.value);
       this.router.navigate([`/tasks/${this.taskForm.value.id}`]);
     } else {
-      this.taskService.addTask({title: this.taskForm.value.title, description: this.taskForm.value.title}).subscribe(
+      this.taskService.addTask({title: this.taskForm.value.title, description: this.taskForm.value.description}).subscribe(
         task =>  this.router.navigate([`/tasks/${task.id}`])
       );
     }
